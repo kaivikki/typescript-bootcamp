@@ -1,0 +1,37 @@
+
+/*parcel index.html
+
+npmjs.com
+
+Type Defination Files:
+  Typescript code --->Type Defination File --> JS Library
+When u install a JS Library either the type defination file is automatically installed 
+or we need to install that manually.
+U can search for type defination file using @types/<JS Library Name> from npmjs.com
+They are usually end with .d.ts
+
+To make the class available somewhere else in the project u need to export it
+example: export class User{}
+
+F1, fold level 2
+
+
+*/
+
+--Generate a tsconfig file.
+tsc --init
+
+--Watch the source directory and compile
+tsc -w
+
+--Run Compiled Code Automatically
+npm install nodemon concurrently
+
+TS and Express:
+- Use the library normally, adding in basic type annotations where possible.
+- Use a TS adapter library that has helpers for using your lib with TS
+- Twist your library to work with TS classes.
+
+npm install express @types/express body-parser @types/body-parser cookie-session @types/body-parser
+
+ts-express-decorator
