@@ -5,16 +5,13 @@
  */
 
 class Vechile{
-
   //Fields
   color:string;
-
   // Constructor, you can shotend the field declaration and assignment 
   // by defining in constructor itself example: public make:string
   constructor(color:string, public make:string){
     this.color=color;
   }
-
   //Functions
   drive():void{
     console.log('vroom vroom');

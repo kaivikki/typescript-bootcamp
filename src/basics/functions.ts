@@ -1,4 +1,4 @@
-
+//***************************   Functions                   */
 const add = (a:number, b:number):number =>{
   return a+b;
 }
@@ -22,3 +22,7 @@ printWeather({
   date: new Date(),
   weather: 'sunny'
 });
+
+
+
+

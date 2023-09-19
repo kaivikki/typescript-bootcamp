@@ -20,5 +20,3 @@ const { coords:{lat,lng} } : { coords:{lat:number,lng:number} } = profile;
 console.log(age);
 console.log(lat);
 console.log(lng);
-
-

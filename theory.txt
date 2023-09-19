@@ -1,3 +1,33 @@
+-- Install Typescript
+npm install -g typescript
+
+-- Typescript adds:
+  - Types
+  - Next Gen Javascript features compiled down for old browsers.
+  - Non Javascript features like Interfaces or Generics.
+  - Meta-Programming features like Decorators.
+  - Rich Configuration Options.
+
+- Learning Path:
+  - Typescript Basics
+  - Compiler and Configurations
+  - Working with Next-gen JS Code.
+  - Classes & Interfaces.
+  - Advanced Types and Typescript features.
+  - Generics
+  - Decorators
+  - Working with Namesspaces and Modules.
+  - Webpack & Typescript
+  - Third Party Libraries and Typescript.
+  - NodeJs + Express + Typescript.
+
+
+
+
+
+
+
+
 
 /*parcel index.html
 
