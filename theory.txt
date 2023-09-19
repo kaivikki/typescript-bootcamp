@@ -65,3 +65,11 @@ TS and Express:
 npm install express @types/express body-parser @types/body-parser cookie-session @types/body-parser
 
 ts-express-decorator
+
+tsconfig Docs: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+
+Compiler Config Docs: https://www.typescriptlang.org/docs/handbook/compiler-options.html
+
+VS Code TS Debugging: https://code.visualstudio.com/docs/typescript/typescript-debugging
+
+Difference between var and let is var has only two scopes global and function where as let also has block scope.
