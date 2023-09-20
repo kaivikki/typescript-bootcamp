@@ -46,3 +46,4 @@ export const deleteTodo: RequestHandler = (req, res, next) => {
 
   res.json({ message: 'Todo deleted!' });
 };
+

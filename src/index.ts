@@ -3,6 +3,7 @@ import { router } from './routes/loginRoute';
 import bodyParser, { json } from 'body-parser';
 import cookieSession from 'cookie-session';
 import todoRoutes from './routes/todos';
+import apiRoutes from './routes/apiCalllDemo';
 
 const app = express();
 
@@ -13,6 +14,7 @@ app.use(cookieSession({ keys: ['laskdjf'] }));
 
 //Regiter Route
 app.use('/todos', todoRoutes);
+app.use('/api', apiRoutes);
 app.use(router);
 
 //Error Handling Middleware
