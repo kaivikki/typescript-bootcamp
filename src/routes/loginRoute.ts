@@ -4,7 +4,7 @@ interface RequestWithBody extends Request {
   body: { [key: string]: string | undefined };
 }
 
-function requireAuth(req: Request, res: Response, next: NextFunction): void {
+const requireAuth = ({name}:{name:string}) =>(req: Request, res: Response, next: NextFunction)=> {
   if (req.session && req.session.loggedIn) {
     next();
     return;

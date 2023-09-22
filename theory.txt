@@ -72,4 +72,7 @@ Compiler Config Docs: https://www.typescriptlang.org/docs/handbook/compiler-opti
 
 VS Code TS Debugging: https://code.visualstudio.com/docs/typescript/typescript-debugging
 
+AXIOS WITH TS
+https://marketsplash.com/tutorials/typescript/axios-typescript/
+
 Difference between var and let is var has only two scopes global and function where as let also has block scope.

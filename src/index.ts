@@ -19,7 +19,7 @@ app.use(router);
 
 //Error Handling Middleware
 app.use((err:Error,req:Request,res:Response, next:NextFunction):void=>{
-  console.log("Uncaught Error Occurred.");
+  console.log("Uncaught Error Occurred.", err.message);
 });
 
 //Start the server.

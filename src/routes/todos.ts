@@ -1,10 +1,17 @@
-import { Router } from 'express';
+import { NextFunction, Request, Response, Router } from 'express';
 
 import { createTodo, getTodos, updateTodo, deleteTodo } from '../controllers/todos';
 
 const router = Router();
 
-router.post('/', createTodo);
+const validator = ({name}:{name:string}) =>(req:Request, res:Response, next:NextFunction) =>{
+  let requestPath = req.originalUrl;
+  let headers = req.headers;
+  console.log(`Validaing Request at ${requestPath}, ${headers} ${name}`);
+  next();
+}
+
+router.post('/',validator({name:'Vikram Arora'}),createTodo);
 
 router.get('/', getTodos);
 

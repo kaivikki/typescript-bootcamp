@@ -6,7 +6,8 @@
   "scripts": {
     "start:build": "tsc -w",
     "start:run": "nodemon dist/index.js",
-    "start": "concurrently npm:start:*"
+    "start": "concurrently npm:start:*",
+    "dev": "nodemon --inspect src/index.ts"
   },
   "keywords": [
     "typescript"
@@ -28,6 +29,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.5.7",
+    "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
   }
 }
