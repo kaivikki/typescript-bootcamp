@@ -76,3 +76,35 @@ AXIOS WITH TS
 https://marketsplash.com/tutorials/typescript/axios-typescript/
 
 Difference between var and let is var has only two scopes global and function where as let also has block scope.
+
+// UserRepository.test.ts
+import oracledb from 'oracledb';
+import UserRepository  from '../src';
+
+
+describe('UserRepository', () => {
+  let userRepository: UserRepository;
+  let mockConnection: oracledb.Connection;
+
+  beforeAll(() => {
+    // Create a mock connection
+    mockConnection = {} as oracledb.Connection;
+
+    // Mock the oracledb module's behavior
+    (oracledb as any).getConnection = jest.fn().mockResolvedValue(mockConnection);
+    userRepository = new UserRepository(mockConnection);
+  });
+
+  it('should create a user', async () => {
+   // Mock the execute method for create operation
+  const mockExecute = jest.fn().mockResolvedValue({ /* Mocked result for create */ });
+  mockConnection.execute = mockExecute;
+
+  // Call the create method
+  const user = { /* User data */ };
+  await userRepository.create(user);
+
+  // Add the assertion to check if execute has been called
+  expect(mockExecute).toHaveBeenCalled();
+  });
+});
