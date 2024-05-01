@@ -1,17 +1,11 @@
 function getValueByKeyUsingRegex(inputString, key) {
-    // Create a regex pattern dynamically based on the key
-    const regex = new RegExp(`^${key}=([\\s\\S]*?)$`, 'm');
-
-    // Search for the pattern in the input string
-    const match = inputString.match(regex);
-
-    // If a match is found, return the value (trimmed)
-    if (match) {
-        return match[1].trim();
-    }
-
-    // Return null if no match is found
-    return null;
+  const regex = new RegExp(`^\\s*${key}\\s*=\\s*([0-9]+).*?$`, 'gmi');
+  const match = inputString.match(regex);
+  if (match) {
+      const result = match[0].match(/[0-9]+/);
+      return result ? result[0] : null;
+  }
+  return null;
 }
 
 function computeDataRange(...args) {
