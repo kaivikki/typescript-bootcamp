@@ -1,11 +1,11 @@
 function getValueByKeyUsingRegex(inputString, key) {
-  const regex = new RegExp(`^\\s*${key}\\s*=\\s*([0-9]+).*?$`, 'gmi');
-  const match = inputString.match(regex);
-  if (match) {
-      const result = match[0].match(/[0-9]+/);
-      return result ? result[0] : null;
-  }
-  return null;
+    const regex = new RegExp(`^\\s*${key}\\s*=\\s*([^\\s]+).*?$`, 'gmi');
+    const match = inputString.match(regex);
+    if (match) {
+        const result = match[0].match(/=\s*([^{{\s]+)/); // Capture everything after '=' until space or '{{'
+        return result ? result[1].trim() : null;
+    }
+    return null;
 }
 
 function computeDataRange(...args) {
