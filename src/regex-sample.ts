@@ -1,3 +1,19 @@
+function getValueByKeyUsingRegex(inputString, key) {
+    // Create a regex pattern dynamically based on the key
+    const regex = new RegExp(`^${key}=([\\s\\S]*?)$`, 'm');
+
+    // Search for the pattern in the input string
+    const match = inputString.match(regex);
+
+    // If a match is found, return the value (trimmed)
+    if (match) {
+        return match[1].trim();
+    }
+
+    // Return null if no match is found
+    return null;
+}
+
 function computeDataRange(...args) {
   let dateRange = args[0];
   dateRange  = Number(dateRange);
@@ -41,3 +57,6 @@ function replaceFnCalls(input) {
 
 const outputString = replaceFnCalls(inputString);
 console.log(outputString);
+
+const valueD = getValueByKeyUsingRegex(inputString, 'D');
+console.log('The value of D is:', valueD);
